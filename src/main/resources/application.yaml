@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: gs-vault-config
+#      testVaultSpring
+  cloud:
+    vault:
+      kv:
+        enabled: true
+      scheme: http
+      token: 00000000-0000-0000-0000-000000000000
+#      hvs.qs8RuyUsxXo0WMnq3SHiYkBI
+  config:
+    import: vault://
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    password: ''
+#    url: jdbc:sqlite:C:\\Users\\alexandreb\\IdeaProjects\\springvault\\${dbName}
+    url: jdbc:sqlite:C:\\Users\\alexandreb\\IdeaProjects\\2-Projects-VaultEtOuConfigServer\\springvault\\springvault.db
+    username: ''
+  jpa:
+    database-platform: com.javainuse.springvault.infrastructure.sqllite.SQLiteDialect
+    show-sql: true
+
+#  jdbc:sqlite:C:\\Users\\alexandreb\\IdeaProjects\\springvault\\springvaultd.db
